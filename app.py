@@ -74,7 +74,7 @@ if __name__ == "__main__":
     interface = gr.ChatInterface(
         fn=chat,
         title="Chat with Daniel Polonski",
-        description="Ask about Daniel's experience, skills, or career background.",
+        description="Ask about experience, skills, or career background.",
         # theme=gr.themes.Default(primary_hue="sky"),
         js=force_dark_mode,   #theme: alternatywnie: "gradio.dark" , soft
         examples=[
@@ -82,7 +82,8 @@ if __name__ == "__main__":
             "What is your experience in AI/ML?",
             "Which companies have you worked for?",
             "How can I contact you?"
-        ]
+        ],
+        textbox=gr.Textbox(autofocus=False)
     )
 
     interface.launch()
